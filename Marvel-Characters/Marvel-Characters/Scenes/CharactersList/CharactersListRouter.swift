@@ -32,8 +32,8 @@ final class CharactersListRouter: Routerable {
 extension CharactersListRouter: CharactersListRouterProtocol {
     func navigateToDetailsScene(model: Character) {
         
-//        let router = CharactersDetailsRouter(navigation: navigation, model: model)
-//         let vc = router.makeViewController()
-//        navigation.present(vc, animated: true, completion: nil)
+        let router = CharactersDetailsRouter(navigation: navigation, model: model)
+         let vc = router.makeViewController()
+        navigation.present(vc, animated: true, completion: nil)
     }
 }
