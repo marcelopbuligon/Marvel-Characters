@@ -40,7 +40,6 @@
 		DE90163A26ED8E0F00996675 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90163526ED8E0F00996675 /* Fixtures.swift */; };
 		DE90163C26ED962500996675 /* CharactersRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90163B26ED962500996675 /* CharactersRouterSpy.swift */; };
 		DE90163E26ED966600996675 /* CharactersServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90163D26ED966600996675 /* CharactersServiceSpy.swift */; };
-		DE90163F26ED978F00996675 /* Marvel_CharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9015E426ED780E00996675 /* Marvel_CharactersUITests.swift */; };
 		DE90165726EDA17C00996675 /* CharactersDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90165326EDA17C00996675 /* CharactersDetailsPresenter.swift */; };
 		DE90165826EDA17C00996675 /* CharactersDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE90165426EDA17C00996675 /* CharactersDetailsViewController.xib */; };
 		DE90165926EDA17C00996675 /* CharactersDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90165526EDA17C00996675 /* CharactersDetailsRouter.swift */; };
@@ -51,13 +50,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		DE9015D626ED780E00996675 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE9015B726ED780C00996675 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE9015BE26ED780C00996675;
-			remoteInfo = "Marvel-Characters";
-		};
-		DE9015E126ED780E00996675 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE9015B726ED780C00996675 /* Project object */;
 			proxyType = 1;
@@ -75,9 +67,6 @@
 		DE9015D026ED780E00996675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE9015D526ED780E00996675 /* Marvel-CharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel-CharactersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9015DB26ED780E00996675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE9015E026ED780E00996675 /* Marvel-CharactersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel-CharactersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE9015E426ED780E00996675 /* Marvel_CharactersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_CharactersUITests.swift; sourceTree = "<group>"; };
-		DE9015E626ED780E00996675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE9015FF26ED7DA600996675 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		DE90160126ED7E4A00996675 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		DE90160326ED7ECF00996675 /* CryptoKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKeys.swift; sourceTree = "<group>"; };
@@ -130,13 +119,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE9015DD26ED780E00996675 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,7 +127,6 @@
 			children = (
 				DE9015C126ED780C00996675 /* Marvel-Characters */,
 				DE9015D826ED780E00996675 /* Marvel-CharactersTests */,
-				DE9015E326ED780E00996675 /* Marvel-CharactersUITests */,
 				DE9015C026ED780C00996675 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,7 +136,6 @@
 			children = (
 				DE9015BF26ED780C00996675 /* Marvel-Characters.app */,
 				DE9015D526ED780E00996675 /* Marvel-CharactersTests.xctest */,
-				DE9015E026ED780E00996675 /* Marvel-CharactersUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,15 +165,6 @@
 				DE9015DB26ED780E00996675 /* Info.plist */,
 			);
 			path = "Marvel-CharactersTests";
-			sourceTree = "<group>";
-		};
-		DE9015E326ED780E00996675 /* Marvel-CharactersUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DE9015E426ED780E00996675 /* Marvel_CharactersUITests.swift */,
-				DE9015E626ED780E00996675 /* Info.plist */,
-			);
-			path = "Marvel-CharactersUITests";
 			sourceTree = "<group>";
 		};
 		DE9015F226ED7A4B00996675 /* API */ = {
@@ -374,24 +345,6 @@
 			productReference = DE9015D526ED780E00996675 /* Marvel-CharactersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DE9015DF26ED780E00996675 /* Marvel-CharactersUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE9015EF26ED780E00996675 /* Build configuration list for PBXNativeTarget "Marvel-CharactersUITests" */;
-			buildPhases = (
-				DE9015DC26ED780E00996675 /* Sources */,
-				DE9015DD26ED780E00996675 /* Frameworks */,
-				DE9015DE26ED780E00996675 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE9015E226ED780E00996675 /* PBXTargetDependency */,
-			);
-			name = "Marvel-CharactersUITests";
-			productName = "Marvel-CharactersUITests";
-			productReference = DE9015E026ED780E00996675 /* Marvel-CharactersUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -405,10 +358,6 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					DE9015D426ED780E00996675 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = DE9015BE26ED780C00996675;
-					};
-					DE9015DF26ED780E00996675 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = DE9015BE26ED780C00996675;
 					};
@@ -429,7 +378,6 @@
 			targets = (
 				DE9015BE26ED780C00996675 /* Marvel-Characters */,
 				DE9015D426ED780E00996675 /* Marvel-CharactersTests */,
-				DE9015DF26ED780E00996675 /* Marvel-CharactersUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -448,13 +396,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE9015D326ED780E00996675 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE9015DE26ED780E00996675 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -512,14 +453,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE9015DC26ED780E00996675 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE90163F26ED978F00996675 /* Marvel_CharactersUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -527,11 +460,6 @@
 			isa = PBXTargetDependency;
 			target = DE9015BE26ED780C00996675 /* Marvel-Characters */;
 			targetProxy = DE9015D626ED780E00996675 /* PBXContainerItemProxy */;
-		};
-		DE9015E226ED780E00996675 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE9015BE26ED780C00996675 /* Marvel-Characters */;
-			targetProxy = DE9015E126ED780E00996675 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -747,46 +675,6 @@
 			};
 			name = Release;
 		};
-		DE9015F026ED780E00996675 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68W3VXC6BG;
-				INFOPLIST_FILE = "Marvel-CharactersUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "marcelopb.Marvel-CharactersUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Marvel-Characters";
-			};
-			name = Debug;
-		};
-		DE9015F126ED780E00996675 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68W3VXC6BG;
-				INFOPLIST_FILE = "Marvel-CharactersUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "marcelopb.Marvel-CharactersUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Marvel-Characters";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -813,15 +701,6 @@
 			buildConfigurations = (
 				DE9015ED26ED780E00996675 /* Debug */,
 				DE9015EE26ED780E00996675 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE9015EF26ED780E00996675 /* Build configuration list for PBXNativeTarget "Marvel-CharactersUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE9015F026ED780E00996675 /* Debug */,
-				DE9015F126ED780E00996675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
