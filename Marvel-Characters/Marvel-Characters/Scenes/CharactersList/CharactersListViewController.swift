@@ -10,6 +10,7 @@ import UIKit
 final class CharactersListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView?
+    @IBOutlet private weak var emptyStateView: UIImageView?
     
     private let presenter: CharactersListPresenter
     private let searchController = UISearchController(searchResultsController: nil)
@@ -70,6 +71,7 @@ extension CharactersListViewController: UITableViewDataSource, UITableViewDelega
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CharactersViewCell.identifier, for: indexPath) as? CharactersViewCell else { return UITableViewCell()}
         let characters = presenter.dataSource[indexPath.row]
         let presenter = CharactersViewCellPresenter(model: characters)
+        emptyStateView?.isHidden = true
         cell.configure(presenter: presenter)
         return cell
     }
@@ -87,13 +89,19 @@ extension CharactersListViewController: UIScrollViewDelegate {
         let contentHeight = scrollView.contentSize.height
         let distanceToBottom = contentHeight - offsetY
         
-        if distanceToBottom < tableView?.frame.height ?? 0 && !presenter.isFetching && !presenter.isFiltering {
+        if distanceToBottom < tableView?.frame.height ?? 0 && !presenter.fetchingOrFiltering() {
             presenter.userDidRequestedMoreCharacters()
         }
     }    
 }
 
 extension CharactersListViewController: CharactersListPresenterDelegate {
+    func showEmptyState() {
+        DispatchQueue.main.async {
+            self.emptyStateView?.isHidden = false
+        }
+    }
+    
     func showAlert(message: String, buttonTitle: String, title: String) {
         let dialogMessage = UIAlertController(
             title: title,

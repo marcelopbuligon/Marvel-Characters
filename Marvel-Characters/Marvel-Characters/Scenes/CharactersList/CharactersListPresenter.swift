@@ -12,6 +12,7 @@ protocol CharactersListPresenterDelegate: AnyObject {
     func reloadData()
     func showLoading()
     func hideLoading()
+    func showEmptyState()
     func setNavigationTitle(_ text: String)
 }
 
@@ -20,10 +21,11 @@ final class CharactersListPresenter: NSObject {
     var dataSource: [Character] = []
     
     weak var view: CharactersListPresenterDelegate?
-    var isFetching: Bool = false
-    var isFiltering: Bool = false
+    private var isFetching: Bool = false
+    private var isFiltering: Bool = false
     
     private var offset: Int = 0
+    private var limit: Int = 10
     private var service: CharactersServiceProtocol
     private var router: CharactersListRouterProtocol
     
@@ -42,6 +44,14 @@ final class CharactersListPresenter: NSObject {
         self.view = view
         view.setNavigationTitle(Localizable.welcomePage.title.rawValue)
         fetchCharacters()
+    }
+    
+    func fetchingOrFiltering() -> Bool {
+        if isFetching && isFiltering {
+            return true
+        } else {
+            return false
+        }
     }
     
     func tryAgainButtonDidTap() {
@@ -89,10 +99,13 @@ final class CharactersListPresenter: NSObject {
 
 extension CharactersListPresenter: CharactersServiceDelegate {
     func didFindCharacters(_ response: [Character]) {
+        if response.isEmpty {
+            view?.showEmptyState()
+        }
         
         if !isFiltering {
-            offset += 10
-        response.forEach { dataSource.append($0) }
+            offset += limit
+            response.forEach { dataSource.append($0) }
         } else {
             dataSource = response
         }
