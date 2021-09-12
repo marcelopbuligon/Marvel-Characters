@@ -16,6 +16,9 @@
 		DE90160026ED7DA600996675 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9015FF26ED7DA600996675 /* APIRequest.swift */; };
 		DE90160226ED7E4A00996675 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90160126ED7E4A00996675 /* Path.swift */; };
 		DE90160426ED7ECF00996675 /* CryptoKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90160326ED7ECF00996675 /* CryptoKeys.swift */; };
+		DE90160726ED837000996675 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90160626ED837000996675 /* Character.swift */; };
+		DE90160926ED83AE00996675 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90160826ED83AE00996675 /* Urls.swift */; };
+		DE90160B26ED83D900996675 /* ThumbNail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90160A26ED83D900996675 /* ThumbNail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		DE9015FF26ED7DA600996675 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		DE90160126ED7E4A00996675 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		DE90160326ED7ECF00996675 /* CryptoKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKeys.swift; sourceTree = "<group>"; };
+		DE90160626ED837000996675 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		DE90160826ED83AE00996675 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		DE90160A26ED83D900996675 /* ThumbNail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbNail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				DE9015F826ED7AB600996675 /* Resources */,
 				DE9015F226ED7A4B00996675 /* API */,
 				DE9015F326ED7A5300996675 /* Components */,
+				DE90160526ED835800996675 /* Models */,
 				DE9015F726ED7A9400996675 /* Extensions */,
 				DE9015F526ED7A8200996675 /* Scenes */,
 				DE9015F626ED7A8C00996675 /* Utils */,
@@ -177,6 +184,16 @@
 				DE9015C426ED780C00996675 /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE90160526ED835800996675 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE90160626ED837000996675 /* Character.swift */,
+				DE90160826ED83AE00996675 /* Urls.swift */,
+				DE90160A26ED83D900996675 /* ThumbNail.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,9 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE90160426ED7ECF00996675 /* CryptoKeys.swift in Sources */,
+				DE90160726ED837000996675 /* Character.swift in Sources */,
+				DE90160926ED83AE00996675 /* Urls.swift in Sources */,
 				DE9015C326ED780C00996675 /* AppDelegate.swift in Sources */,
 				DE90160026ED7DA600996675 /* APIRequest.swift in Sources */,
 				DE90160226ED7E4A00996675 /* Path.swift in Sources */,
+				DE90160B26ED83D900996675 /* ThumbNail.swift in Sources */,
 				DE9015C526ED780C00996675 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
