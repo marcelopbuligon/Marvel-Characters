@@ -2,6 +2,7 @@ import XCTest
 @testable import Marvel_Characters
 
 final class CharactersViewSpy: CharactersListPresenterDelegate {
+    
 
     // MARK: - Test showAlert
     private(set) var showErrorCalled = false
@@ -43,4 +44,11 @@ final class CharactersViewSpy: CharactersListPresenterDelegate {
         setupNavigationTitleCalled = true
         navigationTitlePassed = text
     }
+    
+    // MARK: - Test showEmptyState
+    private(set) var showEmptyStateCalled = false
+    
+    func showEmptyState() {
+        showEmptyStateCalled = true
+    }    
 }

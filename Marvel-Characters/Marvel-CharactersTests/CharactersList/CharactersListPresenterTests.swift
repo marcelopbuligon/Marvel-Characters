@@ -91,4 +91,9 @@ final class CharactersListPresenterTests: XCTestCase {
         sut.tryAgainButtonDidTap()
         XCTAssertTrue(view.tryAgainTapped)
     }
+    
+    func test_EmptyState_shouldDelegateShowEmptyState() {
+        sut.didFindCharacters([])
+        XCTAssertTrue(view.showEmptyStateCalled)
+    }
 }
